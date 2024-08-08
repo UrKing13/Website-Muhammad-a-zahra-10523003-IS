@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi - Penjualan Kucing Ras</title>
+    <link rel="stylesheet" href="body.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Penjualan Kucing Ras</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="invoice.html">Invoice</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="kontak.html">Kontak Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <h3>Pilihan Kucing</h3>
+            <ul>
+                <li><a href="produk.html#kucing1">Kucing Ras Persia 1</a></li>
+                <li><a href="produk.html#kucing2">Kucing Ras Sphynx 2</a></li>
+                <li><a href="produk.html#kucing3">Kucing Ras Bengal 3</a></li>
+                <li><a href="produk.html#kucing4">Kucing Ras Maine Coon 4</a></li>
+            </ul>
+        </aside>
+        <section class="content">
+            <h2>Transaksi</h2>
+            <form id="transaksiForm">
+                <div class="form-group">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="form-group">
+                    <label for="alamat">Alamat:</label>
+                    <input type="text" id="alamat" name="alamat" required placeholder="Masukkan alamat lengkap">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Masukkan email">
+                </div>
+                <div class="form-group">
+                    <label for="telepon">No. Telepon:</label>
+                    <input type="tel" id="telepon" name="telepon" required placeholder="Masukkan no. telepon" pattern="[0-9]{10,13}">
+                </div>
+                <div class="form-group">
+                    <label for="kucing">Pilih Kucing:</label>
+                    <select id="kucing" name="kucing" required>
+                        <option value="" disabled selected>Pilih jenis kucing</option>
+                        <option value="Kucing Ras Persia">Kucing Ras Persia</option>
+                        <option value="Kucing Ras Spynx">Kucing Ras Spynx</option>
+                        <option value="Kucing Ras Bengal">Kucing Ras Bengal</option>
+                        <option value="Kucing Ras Main coon">Kucing Ras Main coon</option>
+                    </select>
+                    
+                </div>
+                <button type="submit">Beli/Pesan</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Penjualan Kucing Ras. All rights reserved.</p>
+    </footer>
+    <script src="js.js"></script>
+    <script>
+        document.getElementById('transaksiForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const nama = document.getElementById('nama').value;
+            const alamat = document.getElementById('alamat').value;
+            const email = document.getElementById('email').value;
+            const telepon = document.getElementById('telepon').value;
+            const kucing = document.getElementById('kucing').value;
+
+            sessionStorage.setItem('nama', nama);
+            sessionStorage.setItem('alamat', alamat);
+            sessionStorage.setItem('email', email);
+            sessionStorage.setItem('telepon', telepon);
+            sessionStorage.setItem('kucing', kucing);
+
+            window.location.href = 'invoice.html';
+        });
+    </script>
+</body>
+</html>

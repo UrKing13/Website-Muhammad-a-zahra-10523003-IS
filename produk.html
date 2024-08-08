@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Penjualan Kucing Ras</title>
+    <link rel="stylesheet" href="body.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('Gambar Kucing/860.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #00FF7F;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #00FF7F;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #fff;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 8px;
+            flex-grow: 1;
+        }
+
+        .product {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            color: #00FF7F;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .product p {
+            font-size: 0.9em;
+            color: #fff;
+            margin: 0;
+        }
+
+        .product .price {
+            font-size: 1.2em;
+            color: #00FF7F;
+            margin: 10px 0;
+        }
+
+        .product button {
+            background-color: #00FF7F;
+            color: #333;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: #009f4d;
+        }
+
+        .sidebar {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            padding: 15px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 120px; /* Adjust according to the header height */
+            left: 20px;
+            animation: fadeIn 1s;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            margin-left: 290px; /* Adjust according to the sidebar width + margin */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #00FF7F;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .products {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .product h3 {
+                font-size: 1em;
+            }
+
+            .product p {
+                font-size: 0.8em;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: relative;
+                top: auto;
+                left: auto;
+                margin-bottom: 20px;
+            }
+
+            main {
+                flex-direction: column;
+                align-items: center;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Penjualan Kucing Ras</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="invoice.html">Invoice</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="kontak.html">Kontak Kami</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <h3>Pilihan Kucing</h3>
+            <ul>
+                <li><a href="#kucing1">Kucing Ras Persia</a></li>
+                <li><a href="#kucing2">Kucing Ras Sphynx</a></li>
+                <li><a href="#kucing3">Kucing Ras Bengal</a></li>
+                <li><a href="#kucing4">Kucing Ras Maine Coon</a></li>
+            </ul>
+        </aside>
+        <section class="content products">
+            <h2>Produk Kami</h2>
+            <div class="product" id="kucing1">
+                <img src="Gambar Kucing/KucingPersia.jpg" alt="Kucing Persia">
+                <h3>Kucing Ras Persia</h3>
+                <p>Kucing berbulu panjang dengan karakter wajah bulat dan moncong pendek. Ideal untuk pecinta kucing yang menyukai penampilan yang anggun dan manis.</p>
+                <p class="price">Rp 5.000.000</p>
+                <button onclick="window.location.href='transaksi.html?kucing=Kucing Ras Persia'">Beli/Pesan</button>
+            </div>
+            <div class="product" id="kucing2">
+                <img src="Gambar Kucing/KucingSpynx.jpg" alt="Kucing Sphynx">
+                <h3>Kucing Ras Sphynx</h3>
+                <p>Kucing tanpa bulu dengan kulit halus yang unik. Meskipun tanpa bulu, kucing ini memiliki rambut halus di beberapa bagian seperti telinga dan kaki.</p>
+                <p class="price">Rp 6.000.000</p>
+                <button onclick="window.location.href='transaksi.html?kucing=Kucing Ras Sphynx'">Beli/Pesan</button>
+            </div>
+            <div class="product" id="kucing3">
+                <img src="Gambar Kucing/KucingBengal.jpg" alt="Kucing Bengal">
+                <h3>Kucing Ras Bengal</h3>
+                <p>Kucing hasil persilangan antara kucing hutan dan domestik. Memiliki pola bulu yang mencolok dan penampilan yang mirip dengan kucing liar.</p>
+                <p class="price">Rp 7.000.000</p>
+                <button onclick="window.location.href='transaksi.html?kucing=Kucing Ras Bengal'">Beli/Pesan</button>
+            </div>
+            <div class="product" id="kucing4">
+                <img src="Gambar Kucing/CAT HERO_0012_Maine_coon.jpg" alt="Kucing Maine Coon">
+                <h3>Kucing Ras Maine Coon</h3>
+                <p>Kucing yang kuat dan berotot. Kucing ini memiliki pertumbuhan dewasa yang lama, yaitu sekitar 3-5 tahun.</p>
+                <p class="price">Rp 8.000.000</p>
+                <button onclick="window.location.href='transaksi.html?kucing=Kucing Ras Maine Coon'">Beli/Pesan</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Penjualan Kucing Ras. All rights reserved.</p>
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>

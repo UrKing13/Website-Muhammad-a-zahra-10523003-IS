@@ -1,0 +1,603 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('Gambar Kucing/860.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+header {
+    background-color: #0a0a0a;
+    color: #00FF7F;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 255, 127, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #00FF7F;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #0a0a0a;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00FF7F;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #00FF7F;
+}
+
+main {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #0a0a0a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ccc;
+    margin-right: 20px;
+}
+
+.sidebar h3 {
+    color: #00FF7F;
+    border-bottom: 2px solid #00FF7F;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #00FF7F;
+}
+
+.content {
+    width: calc(80% - 20px);
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+    background-image: url('path/to/your-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #00FF7F;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 255, 127, 0.5);
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.hero button {
+    background-color: #00FF7F;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.hero button:hover {
+    background-color: #009f4d;
+    box-shadow: 0 4px 10px rgba(0, 255, 127, 0.5);
+}
+
+.products {
+    display: grid;
+    grid-template-areas: 
+        "kucing1 kucing2"
+        "kucing3 kucing4";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+}
+
+.product {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.product h3 {
+    color: #00FF7F;
+    margin-top: 10px;
+}
+
+.product p {
+    color: #ccc;
+}
+
+.product button {
+    background-color: #00FF7F;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.product button:hover {
+    background-color: #009f4d;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 255, 127, 0.5);
+}
+
+footer {
+    background-color: #0a0a0a;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 10px rgba(0, 255, 127, 0.5);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #00FF7F;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #333;
+    color: #00FF7F;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 8px;
+    box-shadow: 0 4px 10px rgba(0, 255, 127, 0.5);
+}
+
+.marquee div {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #444;
+    color: #ccc;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #00FF7F;
+    outline: none;
+}
+
+button {
+    background-color: #00FF7F;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #009f4d;
+    box-shadow: 0 4px 10px rgba(0, 255, 127, 0.5);
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('Gambar Kucing/860.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #00FF7F;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00FF7F;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #00FF7F;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.marquee div {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes glowing {
+    0% { text-shadow: 0 0 5px #00FF7F, 0 0 10px #00FF7F, 0 0 15px #00FF7F, 0 0 20px #00FF7F; }
+    50% { text-shadow: 0 0 10px #00FF7F, 0 0 20px #00FF7F, 0 0 30px #00FF7F, 0 0 40px #00FF7F; }
+    100% { text-shadow: 0 0 5px #00FF7F, 0 0 10px #00FF7F, 0 0 15px #00FF7F, 0 0 20px #00FF7F; }
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.sidebar {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    border-radius: 12px;
+    padding: 15px;
+    margin-right: 20px;
+    width: 250px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar h3 {
+    color: #00FF7F;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00FF7F;
+    padding-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, padding-left 0.3s;
+    padding-left: 10px;
+}
+
+.sidebar ul li a:hover {
+    color: #00FF7F;
+    padding-left: 20px;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(100% - 290px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #00FF7F;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+/* body.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('Gambar Kucing/860.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #00FF7F;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00FF7F;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+aside.sidebar {
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    border-radius: 12px;
+    padding: 20px;
+    margin-right: 20px;
+    width: 250px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+aside.sidebar h3 {
+    color: #00FF7F;
+    border-bottom: 2px solid #00FF7F;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+aside.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside.sidebar ul li {
+    margin: 10px 0;
+}
+
+aside.sidebar ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+aside.sidebar ul li a:hover {
+    color: #fff;
+}
+
+.content {
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6));
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00FF7F;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #00FF7F;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #00FF7F;
+}
+
+button {
+    background-color: #00FF7F;
+    color: #333;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #009f4d;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #00FF7F;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
